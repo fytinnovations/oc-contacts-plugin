@@ -9,3 +9,6 @@ fields:
     email:
         label: fytinnovations.contacts::lang.contact.email
         span: right
+    mobile:
+        label: fytinnovations.contacts::lang.contact.mobile
+        span: left

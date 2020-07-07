@@ -3,6 +3,18 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    name@preview:
+        label: fytinnovations.contacts::lang.message.name
+        relation: contact
+        select: name
+        span: left
+    email@preview:
+        label: fytinnovations.contacts::lang.message.email
+        relation: contact
+        select: email
+        span: right
+    subject:
+        label: fytinnovations.contacts::lang.message.subject
+    content:
+        label: fytinnovations.contacts::lang.message.content
+        type: textarea

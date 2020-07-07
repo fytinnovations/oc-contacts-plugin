@@ -10,3 +10,5 @@ columns:
         label: fytinnovations.contacts::lang.contact.name
     email:
         label: fytinnovations.contacts::lang.contact.email
+    mobile:
+        label: fytinnovations.contacts::lang.contact.mobile

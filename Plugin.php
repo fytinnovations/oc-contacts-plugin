@@ -3,6 +3,7 @@
 namespace Fytinnovations\Contacts;
 
 use Backend;
+use Fytinnovations\Contacts\Components\ContactForm;
 use System\Classes\PluginBase;
 
 /**
@@ -51,11 +52,9 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'Fytinnovations\Contacts\Components\MyComponent' => 'myComponent',
-        ];
+            ContactForm::class => 'contactForm'
+        ]; // Remove this line to activate
     }
 
     /**
@@ -102,6 +101,13 @@ class Plugin extends PluginBase
                     ]
                 ]
             ],
+        ];
+    }
+
+    public function registerMailTemplates()
+    {
+        return [
+            'fytinnovations.contacts::mail.contact_form_submitted',
         ];
     }
 }

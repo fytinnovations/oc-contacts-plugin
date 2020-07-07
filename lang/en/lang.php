@@ -3,7 +3,7 @@
 return [
     'plugin' => [
         'name' => 'Contacts',
-        'description' => 'No description provided yet...',
+        'description' => 'Manage contacts and receive messages from your users',
     ],
     'permissions' => [
         'some_permission' => 'Permission example',
@@ -11,6 +11,7 @@ return [
     'contact' => [
         'name' => 'Name',
         'email' => 'Email',
+        'mobile' => 'Mobile',
         'new' => 'New Contact',
         'label' => 'Contact',
         'create_title' => 'Create Contact',
@@ -30,6 +31,7 @@ return [
         'name' => 'Name',
         'subject' => 'Subject',
         'email' => 'Email',
+        'content' => 'Content',
         'new' => 'New Message',
         'label' => 'Message',
         'create_title' => 'Create Message',
@@ -44,5 +46,18 @@ return [
         'delete_confirm' => 'Do you really want to delete this Message?',
         'delete_selected_success' => 'Successfully deleted the selected Messages.',
         'delete_selected_empty' => 'There are no selected Messages to delete.',
+    ],
+    'components' => [
+        'contactform' => [
+            'name' => 'Contact Form',
+            'description' => 'Displays a page through which users can contact',
+            'redirect_page' => 'Redirect Page',
+            'redirect_page_desc' => 'Page to redirect when the message has been saved.',
+            'success_message' => 'Success Message',
+            'success_message_desc' => 'Message to display when the message has been successfully submitted.',
+            'success_message_default' => 'Thankyou, for contacting us. We will get back to you soon.',
+            'enable_email_notification' => 'Enable Email Notifications',
+            'enable_email_notification_desc' => 'Notify administrators of the website upon submission.'
+        ],
     ],
 ];

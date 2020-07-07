@@ -24,7 +24,7 @@ class Contact extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['name', 'email', 'mobile'];
 
     /**
      * @var array Validation rules for attributes

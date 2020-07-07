@@ -1,0 +1,34 @@
+{{ form_ajax(__SELF__~'::onSave') }}
+    <div class="contact-form">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="{{ __SELF }}Name">Name</label>
+                    <input type="text" class="form-control" id="{{ __SELF }}Name" name="name">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="{{ __SELF }}Email">Email</label>
+                    <input type="text" class="form-control" id="{{ __SELF }}Email" name="email">
+                </div>        
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="{{ __SELF }}Mobile">Mobile No</label>
+                    <input type="text" class="form-control" id="{{ __SELF }}Mobile" name="mobile">
+                </div>        
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="{{ __SELF }}Subject">Subject</label>
+            <input type="text" class="form-control" id="{{ __SELF }}Subject" name="subject">
+        </div>
+        <div class="form-group">
+            <label for="{{ __SELF }}Message">Message</label>
+            <textarea class="form-control" id="{{ __SELF }}Message" rows="3" name="content"></textarea>
+        </div>
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Submit">
+{{ form_close() }}

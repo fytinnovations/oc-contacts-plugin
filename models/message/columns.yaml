@@ -8,8 +8,11 @@ columns:
         searchable: true
     name:
         label: fytinnovations.contacts::lang.message.name
+        relation: contact
+        select: name
     email:
         label: fytinnovations.contacts::lang.message.email
+        relation: contact
+        select: email
     subject:
         label: fytinnovations.contacts::lang.message.subject
-

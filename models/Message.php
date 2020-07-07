@@ -1,4 +1,6 @@
-<?php namespace Fytinnovations\Contacts\Models;
+<?php
+
+namespace Fytinnovations\Contacts\Models;
 
 use Model;
 
@@ -22,12 +24,14 @@ class Message extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['content', 'subject'];
 
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'content' => 'required'
+    ];
 
     /**
      * @var array Attributes to be cast to native types
@@ -62,7 +66,9 @@ class Message extends Model
      */
     public $hasOne = [];
     public $hasMany = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'contact' => Contact::class
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
