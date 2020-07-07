@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: fytinnovations.contacts::lang.contact.label
+
+# Model Form Field configuration
+form: $/fytinnovations/contacts/models/contact/fields.yaml
+
+# Model Class name
+modelClass: Fytinnovations\Contacts\Models\Contact
+
+# Default redirect location
+defaultRedirect: fytinnovations/contacts/contacts
+
+# Create page
+create:
+    title: fytinnovations.contacts::lang.contact.create_title
+    redirect: fytinnovations/contacts/contacts/update/:id
+    redirectClose: fytinnovations/contacts/contacts
+
+# Update page
+update:
+    title: fytinnovations.contacts::lang.contact.update_title
+    redirect: fytinnovations/contacts/contacts
+    redirectClose: fytinnovations/contacts/contacts
+
+# Preview page
+preview:
+    title: fytinnovations.contacts::lang.contact.preview_title

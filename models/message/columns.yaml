@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: fytinnovations.contacts::lang.message.name
+    email:
+        label: fytinnovations.contacts::lang.message.email
+    subject:
+        label: fytinnovations.contacts::lang.message.subject
+

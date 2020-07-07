@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: fytinnovations.contacts::lang.message.label
+
+# Model Form Field configuration
+form: $/fytinnovations/contacts/models/message/fields.yaml
+
+# Model Class name
+modelClass: Fytinnovations\Contacts\Models\Message
+
+# Default redirect location
+defaultRedirect: fytinnovations/contacts/messages
+
+# Create page
+create:
+    title: fytinnovations.contacts::lang.message.create_title
+    redirect: fytinnovations/contacts/messages/update/:id
+    redirectClose: fytinnovations/contacts/messages
+
+# Update page
+update:
+    title: fytinnovations.contacts::lang.message.update_title
+    redirect: fytinnovations/contacts/messages
+    redirectClose: fytinnovations/contacts/messages
+
+# Preview page
+preview:
+    title: fytinnovations.contacts::lang.message.preview_title

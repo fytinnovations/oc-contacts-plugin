@@ -1,0 +1,11 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: fytinnovations.contacts::lang.contact.name
+        span: left
+    email:
+        label: fytinnovations.contacts::lang.contact.email
+        span: right
