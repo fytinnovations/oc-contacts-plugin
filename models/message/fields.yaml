@@ -5,13 +5,11 @@
 fields:
     name@preview:
         label: fytinnovations.contacts::lang.message.name
-        relation: contact
-        select: name
+        type: text
         span: left
     email@preview:
         label: fytinnovations.contacts::lang.message.email
-        relation: contact
-        select: email
+        type: text
         span: right
     subject:
         label: fytinnovations.contacts::lang.message.subject

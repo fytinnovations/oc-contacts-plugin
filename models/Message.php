@@ -61,6 +61,7 @@ class Message extends Model
         'updated_at'
     ];
 
+    public $with = ['contact'];
     /**
      * @var array Relations
      */
@@ -75,4 +76,16 @@ class Message extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    /**Returns the name  of the contact who submitted the message */
+    public function getNameAttribute()
+    {
+        return $this->contact->name;
+    }
+
+    /**Returns the name of the contact who submitted the message */
+    public function getEmailAttribute()
+    {
+        return $this->contact->email;
+    }
 }
