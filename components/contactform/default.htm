@@ -1,39 +1,50 @@
+<h2>Contact Us</h2>
+
 {{ form_ajax(__SELF__~'::onSave',{ validate: true, flash: true}) }}
-    <div class="contact-form">
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="{{ __SELF }}Name">Name</label>
-                    <input type="text" class="form-control" id="{{ __SELF }}Name" name="name">
-                    <span class="text-danger" data-validate-for="name"></span>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="{{ __SELF }}Email">Email</label>
-                    <input type="text" class="form-control" id="{{ __SELF }}Email" name="email">
-                     <span class="text-danger" data-validate-for="email"></span>
-                </div>        
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="{{ __SELF }}Mobile">Mobile No</label>
-                    <input type="text" class="form-control" id="{{ __SELF }}Mobile" name="mobile">
-                    <span class="text-danger" data-validate-for="mobile"></span>
-                </div>        
+<div class="contact-form">
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="{{ __SELF }}Name">Name</label>
+                <input type="text" class="form-control" id="{{ __SELF }}Name" name="name">
+                <span class="text-danger" data-validate-for="name"></span>
             </div>
         </div>
-        <div class="form-group">
-            <label for="{{ __SELF }}Subject">Subject</label>
-            <input type="text" class="form-control" id="{{ __SELF }}Subject" name="subject">
-            <span class="text-danger" data-validate-for="subject"></span>
-        </div>
-        <div class="form-group">
-            <label for="{{ __SELF }}Message">Message Content</label>
-            <textarea class="form-control" id="{{ __SELF }}Message" rows="3" name="content"></textarea>
-            <span class="text-danger" data-validate-for="content"></span>
+        <div class="col">
+            <div class="form-group">
+                <label for="{{ __SELF }}Surname">Surname</label>
+                <input type="text" class="form-control" id="{{ __SELF }}Surname" name="surname">
+                <span class="text-danger" data-validate-for="surname"></span>
+            </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="{{ __SELF }}Email">Email</label>
+                <input type="text" class="form-control" id="{{ __SELF }}Email" name="email">
+                <span class="text-danger" data-validate-for="email"></span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="{{ __SELF }}Mobile">Mobile No</label>
+                <input type="text" class="form-control" id="{{ __SELF }}Mobile" name="mobile">
+                <span class="text-danger" data-validate-for="mobile"></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="{{ __SELF }}Subject">Subject</label>
+        <input type="text" class="form-control" id="{{ __SELF }}Subject" name="subject">
+        <span class="text-danger" data-validate-for="subject"></span>
+    </div>
+    <div class="form-group">
+        <label for="{{ __SELF }}Message">Message Content</label>
+        <textarea class="form-control" id="{{ __SELF }}Message" rows="3" name="content"></textarea>
+        <span class="text-danger" data-validate-for="content"></span>
+    </div>
+</div>
 
-    <input type="submit" class="btn btn-primary" value="Submit">
+<input type="submit" class="btn btn-primary" value="Submit">
 {{ form_close() }}

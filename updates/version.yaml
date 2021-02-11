@@ -2,3 +2,6 @@
   - First version of Contacts
   - create_contacts_table.php
   - create_messages_table.php
+1.1.0:
+  - Add Surname Column to Contact Form
+  - update_contacts_table_add_surname_column.php
