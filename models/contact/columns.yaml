@@ -9,6 +9,9 @@ columns:
     name:
         label: fytinnovations.contacts::lang.contact.name
         searchable: true
+    surname:
+        label: fytinnovations.contacts::lang.contact.surname
+        searchable: true
     email:
         label: fytinnovations.contacts::lang.contact.email
         searchable: true

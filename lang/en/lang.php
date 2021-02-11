@@ -10,6 +10,7 @@ return [
     ],
     'contact' => [
         'name' => 'Name',
+        'surname' => 'Surname',
         'email' => 'Email',
         'mobile' => 'Mobile',
         'new' => 'New Contact',
