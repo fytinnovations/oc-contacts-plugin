@@ -3,7 +3,9 @@
 namespace Fytinnovations\Contacts;
 
 use Backend;
+use BackendAuth;
 use Fytinnovations\Contacts\Components\ContactForm;
+use Fytinnovations\Contacts\Models\Message;
 use System\Classes\PluginBase;
 
 /**
@@ -81,6 +83,8 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
+        $unReadMessageCount = Message::unread(BackendAuth::getUser())->get()->count();
+
         return [
             'contacts' => [
                 'label'       => 'fytinnovations.contacts::lang.plugin.name',
@@ -88,6 +92,8 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-address-book',
                 'permissions' => ['fytinnovations.contacts.*'],
                 'order'       => 500,
+                'counter'     =>  $unReadMessageCount,
+                'counterLabel' => 'fytinnovations.contacts::lang.messages.unread',
                 'sideMenu'    => [
                     'contacts' => [
                         'label'       => 'fytinnovations.contacts::lang.contacts.menu_label',
@@ -98,6 +104,8 @@ class Plugin extends PluginBase
                         'label'       => 'fytinnovations.contacts::lang.messages.menu_label',
                         'url'         => Backend::url('fytinnovations/contacts/messages'),
                         'icon'        => 'icon-envelope',
+                        'counter'     =>  $unReadMessageCount,
+                        'counterLabel' => 'fytinnovations.contacts::lang.messages.unread',
                     ]
                 ]
             ],

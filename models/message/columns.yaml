@@ -16,3 +16,7 @@ columns:
         select: email
     subject:
         label: fytinnovations.contacts::lang.message.subject
+    is_read:
+        label: fytinnovations.contacts::lang.message.is_read
+        type: partial
+        path: ~/plugins/fytinnovations/contacts/models/message/_is_read_column.htm

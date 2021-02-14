@@ -39,6 +39,7 @@ return [
         'update_title' => 'Edit Message',
         'preview_title' => 'Preview Message',
         'list_title' => 'Manage Messages',
+        'is_read' => 'Is Read'
     ],
     'messages' => [
         'delete_selected_confirm' => 'Delete the selected Messages?',
@@ -47,6 +48,7 @@ return [
         'delete_confirm' => 'Do you really want to delete this Message?',
         'delete_selected_success' => 'Successfully deleted the selected Messages.',
         'delete_selected_empty' => 'There are no selected Messages to delete.',
+        'unread' => 'Unread Messages'
     ],
     'components' => [
         'contactform' => [

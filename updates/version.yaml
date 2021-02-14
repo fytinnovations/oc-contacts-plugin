@@ -5,3 +5,6 @@
 1.1.0:
   - Add Surname Column to Contact Form
   - update_contacts_table_add_surname_column.php
+1.2.0:
+  - Messages have read/unread status
+  - create_backend_user_message_reads_table.php

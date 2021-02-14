@@ -1,8 +1,11 @@
-<?php namespace Fytinnovations\Contacts\Controllers;
+<?php
+
+namespace Fytinnovations\Contacts\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
 use Flash;
+use Fytinnovations\Contacts\Models\BackendUserMessageRead;
 use Lang;
 use Fytinnovations\Contacts\Models\Message;
 
@@ -39,11 +42,16 @@ class Messages extends Controller
             }
 
             Flash::success(Lang::get('fytinnovations.contacts::lang.messages.delete_selected_success'));
-        }
-        else {
+        } else {
             Flash::error(Lang::get('fytinnovations.contacts::lang.messages.delete_selected_empty'));
         }
 
         return $this->listRefresh();
+    }
+
+    public function preview($id)
+    {
+        BackendUserMessageRead::firstOrCreate(['message_id' => $id, 'backend_user_id' => $this->user->id]);
+        return $this->asExtension('FormController')->preview($id);
     }
 }
