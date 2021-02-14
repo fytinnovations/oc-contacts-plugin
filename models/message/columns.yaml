@@ -19,4 +19,5 @@ columns:
     is_read:
         label: fytinnovations.contacts::lang.message.is_read
         type: partial
+        sortable: false
         path: ~/plugins/fytinnovations/contacts/models/message/_is_read_column.htm
