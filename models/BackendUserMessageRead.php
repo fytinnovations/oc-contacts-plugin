@@ -59,9 +59,7 @@ class BackendUserMessageRead extends Model
         'read_at',
     ];
 
-    const CREATED_AT = 'read_at';
-    const UPDATED_AT = null;
-
+    public $timestamps = false;
     /**
      * @var array Relations
      */

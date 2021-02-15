@@ -15,7 +15,7 @@ class CreateBackendUserMessageReadsTable extends Migration
             $table->increments('id');
             $table->integer('backend_user_id')->unsigned();
             $table->integer('message_id')->unsigned();
-            $table->dateTime('read_at');
+            $table->timestamp('read_at')->useCurrent();
         });
 
         Schema::table('fytinnovations_contacts_backend_user_message_reads', function (Blueprint $table) {
